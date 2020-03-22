@@ -16,6 +16,9 @@ class Cart(models.Model):
     # 之后处理提交购物车信息的时候根据这个筛选
     status = models.BooleanField(default=False)
 
+    def __str__(self):
+        return self.book.title + '-' + self.user.get_full_name()
+
 
 # 订单表
 class Order(models.Model):
@@ -34,6 +37,9 @@ class Order(models.Model):
     # 为了代表一次订单的所有条目
     group = models.IntegerField(null=True)
 
+    def __str__(self):
+        return self.book.title + '-' + self.user.get_full_name()
+
 
 # 购买历史表
 # 和用户是一对一的
@@ -48,3 +54,6 @@ class History(models.Model):
     count = models.IntegerField(default=0)
     # 地址
     address = models.CharField(max_length=150, default='武汉大学计算机学院')
+
+    def __str__(self):
+        return self.book.title + '-' + self.user.get_full_name()

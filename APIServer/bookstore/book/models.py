@@ -21,16 +21,25 @@ class Book(models.Model):
     author = models.ForeignKey("Author", on_delete=models.CASCADE)
     category = models.ForeignKey("Category", on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.title
+
 
 # 作者表
 class Author(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
 
+    def __str__(self):
+        return self.name
+
 
 # 分类表
 class Category(models.Model):
     name = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name
 
 
 class Comment(models.Model):
@@ -42,3 +51,6 @@ class Comment(models.Model):
     customer_id = ShortUUIDField()
     # 评论的书籍
     book = models.ForeignKey("Book", on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.book.title

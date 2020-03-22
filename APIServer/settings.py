@@ -26,6 +26,8 @@ SECRET_KEY = 'c$u4j20g(_02tg_+2(3+b)$41l^#lz0yrk*k!&%i8z-qql9^l%'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    # 'yrzhao.club',
+    # 'www.yrzhao.club'
 ]
 
 
