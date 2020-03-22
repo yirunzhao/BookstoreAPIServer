@@ -61,7 +61,7 @@ def get_return_data(books):
             cmt_list.append({"customer": customer.username, "content": cmt.content, "time": cmt.time})
 
         ret_books.append({"id": book.id, "title": book.title, "publisher": book.publisher, "author": book.author.name,
-                          "price": book.price, "category": book.price, "category_id": book.category_id,
+                          "price": book.price, "category": book.category.name, "category_id": book.category_id,
                           "author_info": book.author.description, "comment": cmt_list, "catalogue": catalogue_list})
     data = {
         "total": total,
