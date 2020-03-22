@@ -36,7 +36,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     uid = ShortUUIDField(primary_key=True)
     password = models.CharField(max_length=200)
     telephone = models.CharField(max_length=11, unique=True)
-    email = models.EmailField(unique=True)
+    email = models.EmailField()
     username = models.CharField(max_length=100)
     # 是否可用
     is_active = models.BooleanField(default=True)
