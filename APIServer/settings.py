@@ -23,11 +23,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'c$u4j20g(_02tg_+2(3+b)$41l^#lz0yrk*k!&%i8z-qql9^l%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    # 'yrzhao.club',
-    # 'www.yrzhao.club'
+    'yrzhao.club',
+    'www.yrzhao.club'
 ]
 
 
@@ -115,7 +115,7 @@ DATABASES = {
         'HOST': '127.0.0.1',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': 'Zyr991225+',
+        'PASSWORD': 'zyr123456',
     }
 }
 AUTH_USER_MODEL = 'storeauth.User'
