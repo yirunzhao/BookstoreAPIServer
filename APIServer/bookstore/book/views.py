@@ -119,7 +119,7 @@ def comment(request):
             cmt = Comment(content=content, customer_id=uid, book_id=book_id)
             cmt.book = book
             cmt.save()
-            return succeed_return({},"评论成功")
+            return succeed_return({}, "评论成功")
         else:
             return error_return("没有这本书")
     else:
