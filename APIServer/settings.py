@@ -25,8 +25,9 @@ SECRET_KEY = 'c$u4j20g(_02tg_+2(3+b)$41l^#lz0yrk*k!&%i8z-qql9^l%'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'yrzhao.club',
-    'www.yrzhao.club'
+    # 'yrzhao.club',
+    # 'www.yrzhao.club'
+    '*'
 ]
 
 # Application definition
@@ -152,4 +153,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/ubuntu/bookstore/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
