@@ -198,7 +198,7 @@ def get_history(request):
     for history_item in user.history_set.all():
         histories.append({'title': history_item.book.title, 'author': history_item.book.author.name,
                           'price': history_item.book.price, 'publisher': history_item.book.publisher,
-                          'category': history_item.book.category.name, 'date': history_item.time})
+                          'category': history_item.book.category.name, 'date': history_item.time, 'count': history_item.count})
     data = {
         'total': len(histories),
         'books': histories
