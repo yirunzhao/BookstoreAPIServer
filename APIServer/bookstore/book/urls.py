@@ -5,5 +5,6 @@ urlpatterns = [
     path('', views.get_book),
     path('category/', views.select_category),
     path('comment/', views.comment),
-    path('one/', views.get_one_book)
+    path('one/', views.get_one_book),
+    path('getcate/', views.get_categories)
 ]

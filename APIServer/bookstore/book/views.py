@@ -124,3 +124,12 @@ def comment(request):
             return error_return("没有这本书")
     else:
         return error_return("参数不对")
+
+
+@require_GET
+def get_categories(request):
+    categories = []
+    for category in Category.objects.all():
+        categories.append({'category': category.name, 'category_id': category.id})
+
+    return succeed_return(categories, '获取全部分类成功')
