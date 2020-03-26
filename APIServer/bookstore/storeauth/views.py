@@ -58,7 +58,7 @@ def modify_user(request):
         password = data['password']
 
         # 获取用户
-        user = User.objects.filter(uid=uid, password=password).first()
+        user = User.objects.filter(uid=uid).first()
         # 判断是否存在
         if user is not None:
             exists = User.objects.filter(telephone=telephone).exists()
