@@ -62,7 +62,8 @@ def get_return_data(books):
 
         ret_books.append({"id": book.id, "title": book.title, "publisher": book.publisher, "author": book.author.name,
                           "price": book.price, "category": book.category.name, "category_id": book.category_id,
-                          "author_info": book.author.description, "comment": cmt_list, "catalogue": catalogue_list})
+                          "author_info": book.author.description, "comment": cmt_list, "catalogue": catalogue_list,
+                          "url": book.url})
     data = {
         "total": total,
         "books": ret_books
@@ -95,7 +96,8 @@ def get_one_book(request):
                     "category_id": book.category_id,
                     "author_info": book.author.description,
                     "comment": cmts,
-                    "catalogue": catalogue_list
+                    "catalogue": catalogue_list,
+                    "url": book.url
                 },
                 "meta": {
                     "status": 200,
