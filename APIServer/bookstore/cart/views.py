@@ -183,6 +183,9 @@ def purchase(request):
         # 删除order
         order.delete()
 
+        # 修改书籍，默认前端在订单时已经判断可以购买
+        Book.objects.filter(pk=order.book.id).update(count=F('count')-order.count)
+
     return succeed_return({}, '购买成功！')
 
 
