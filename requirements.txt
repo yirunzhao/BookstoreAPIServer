@@ -1,4 +1,4 @@
-bleach==3.1.0
+bleach==3.1.4
 Django==2.2.7
 django-cors-headers==3.2.1
 django-shortuuidfield==0.1.3
